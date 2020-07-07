@@ -19,12 +19,17 @@ app.get('',function(req,res){
 
 app.get('/weather',function(req,res){
     const address=req.query.address;
+    if(!address){
+        return res.send({
+            error: "Please enter any address"
+        })
+    }
     weatherdata(address,(error,{temperature,description,cityName})=>{
         if(error){
             return res.send({error});
         }
         console.log(temperature,description,cityName);
-        res.json({
+        res.send({
             temp: temperature,
             desc: description,
             name: cityName
