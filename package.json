@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "An interactive weather app where you can see weather of any region by searching its name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostlypanda/my-weatherapp.git"
+  },
+  "author": "sarthak mittal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostlypanda/my-weatherapp/issues"
+  },
+  "homepage": "https://github.com/mostlypanda/my-weatherapp#readme"
+}
