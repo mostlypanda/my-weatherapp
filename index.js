@@ -14,7 +14,9 @@ app.use(express.static(path.join(__dirname+'/public')));
 
 
 app.get('',function(req,res){
-    res.send('hyy this is weather app');
+    res.render('index',{
+        title: 'Weather app'
+    });
 });
 
 app.get('/weather',function(req,res){
