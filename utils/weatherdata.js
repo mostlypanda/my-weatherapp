@@ -5,9 +5,9 @@ const constants = require('../config');
 
 const weather= function(address,callback){
     const url=constants.openweathermap.BASE_URL + encodeURIComponent(address) + '&appid=' + constants.openweathermap.SECRET_KEY;
-    console.log(url);
+    //console.log(url);
     request({url,json:true},(err,{body})=>{
-        console.log(body);
+        //console.log(body);
         if(err){
             callback("can't fetch data");
         }
