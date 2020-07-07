@@ -19,7 +19,7 @@ dateElement.textContent = new Date().getDate() + ", " + monthNames[new Date().ge
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(search.value);
+    //console.log(search.value);
     locationElement.textContent = "Loading...";
     tempElement.textContent = "";
     weatherCondition.textContent = "";
@@ -31,7 +31,7 @@ weatherForm.addEventListener('submit', (event) => {
                 tempElement.textContent = "";
                 weatherCondition.textContent = "";
             } else {
-                console.log()
+                //console.log()
                 if(data.description === "rain" || data.description === "fog") {
                     weatherIcon.className = "wi wi-day-" + data.description
                 } else {
