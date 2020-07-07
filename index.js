@@ -26,21 +26,21 @@ app.get('/weather',function(req,res){
             error: "Please enter any address"
         })
     }
-    weatherdata(address,(error,{temperature,description,cityName})=>{
+    weatherdata(address,(error,{temperature,description,cityName}={})=>{
         if(error){
             return res.send({error});
         }
         console.log(temperature,description,cityName);
         res.send({
-            temp: temperature,
-            desc: description,
-            name: cityName
+            temperature,description,cityName
         });
     })
 });
 
 app.get('*',function(req,res){
-    res.send('page not found');
+    res.render('404',{
+        title: "page not found"
+    })
 });
 
 const PORT=3000 || process.env.PORT;

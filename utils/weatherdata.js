@@ -11,6 +11,9 @@ const weather= function(address,callback){
         if(err){
             callback("can't fetch data");
         }
+        else if(!body.main||!body.main.temp||!body.name||!body.weather){
+            callback("unable to find required data",undefined);
+        }
         else {
             callback(undefined,{
                 temperature: body.main.temp,
