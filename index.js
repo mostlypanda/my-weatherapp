@@ -30,7 +30,7 @@ app.get('/weather',function(req,res){
         if(error){
             return res.send({error});
         }
-        console.log(temperature,description,cityName);
+       // console.log(temperature,description,cityName);
         res.send({
             temperature,description,cityName
         });
@@ -46,5 +46,5 @@ app.get('*',function(req,res){
 const PORT=3000 || process.env.PORT;
 
 app.listen(PORT,()=>{
-    console.log(`app is live at ${PORT}`);
+   // console.log(`app is live at ${PORT}`);
 });
